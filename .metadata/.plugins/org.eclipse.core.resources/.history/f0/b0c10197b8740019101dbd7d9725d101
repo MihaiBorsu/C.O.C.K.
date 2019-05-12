@@ -1,0 +1,44 @@
+package bench.test;
+
+import bench.cpu.CPUThreading;
+import logging.ConsoleLogger;
+import logging.ILogger;
+import logging.TimeUnit;
+import timing.ITimer;
+import timing.Timer;
+
+public class executor {
+	public float score;
+
+	public void execute() {
+		PCSpecs specs = new PCSpecs();
+		((PCSpecs) specs).PCSpec();
+
+		int cores = Integer.valueOf(specs.proc4);
+		// int cores = 2;// aici il testam eu pentru mac.ok,ca pemac nu merge, si ii dadeam cores eu. OK
+		ITimer timer = new Timer();
+		ILogger log = new ConsoleLogger();
+		TimeUnit timeUnit = TimeUnit.milli;
+		CPUThreading bench = new CPUThreading();
+		long time;
+//see, nu citeste cores si da fault aici.  Bine ca am gasit, sa vedem daca a trimi mail-ul, will take some time. iti fac un .txt cu rezultatele trimise la mn pe mail? poti, dar trebe cumva sa rezolvam problema asta
+		//1 quick fix: sa calculam score, fara cores. gen alt benchmark implementat, vreunu din lab ce nu folosea cores sa, i i dam Ok, e o varianta. 
+		//LET ME CHECK MY mails. 
+		// OK Ce e ciudat e ca la Robert i-a citit cpu-ul si core-urile
+		bench.initialize(10000000);
+		for (int threads = 1; threads <= cores * 2; threads *= 2) {
+			timer.start();
+			bench.run(new Integer(threads));
+			time = timer.stop();
+			score = 0.0f;
+			System.out.println("Threads: " + threads + " -> time: " + (time / 1000000) + " ms");
+			time = time / 1000000;
+
+			score += threads * 100000 / time;
+
+			log.writeTime(timer.stop(), timeUnit);
+		}
+		log.close();
+		System.out.println("SCORE: " + score);
+	}
+}

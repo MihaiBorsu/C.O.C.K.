@@ -1,0 +1,9 @@
+package bench.test;
+
+public class OSValidator {
+
+	public OSValidator() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

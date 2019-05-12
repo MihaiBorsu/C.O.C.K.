@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+/home/mihai/Documents/CO3/.metadata/.plugins/org.eclipse.jdt.core
+4254533856.index
+3447053652.index
+3407696285.index
+1175494123.index
