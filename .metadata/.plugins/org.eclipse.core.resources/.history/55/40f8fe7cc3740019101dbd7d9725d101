@@ -1,0 +1,9 @@
+package bench.cpu;
+
+public class FlopPhoto {
+
+	public FlopPhoto() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

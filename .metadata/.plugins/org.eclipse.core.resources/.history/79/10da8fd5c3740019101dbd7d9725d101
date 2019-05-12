@@ -37,7 +37,7 @@ public class executor {
 			log.writeTime(timer.stop(), timeUnit);
 		}
 		
-		/*bench = new FlopPhoto();
+		bench = new FlopPhoto();
 		bench.initialize(0);
 		timer.start();
 		bench.run();
@@ -45,7 +45,7 @@ public class executor {
 		score = 0.0f;
 		time = time / 1000000;
 		score += 1000000 / time;
-		*/
+		
 		log.close();
 		System.out.println("SCORE: " + score);
 	}
