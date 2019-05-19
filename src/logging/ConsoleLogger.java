@@ -1,6 +1,5 @@
 package logging;
 
-
 public class ConsoleLogger implements ILogger {
 
 	@Override
