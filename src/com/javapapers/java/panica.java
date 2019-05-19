@@ -9,7 +9,7 @@ public class panica
 	public void SendFromYahoo()
 	{
 	  	  PCSpecs specs = new PCSpecs();
-			  ((PCSpecs) specs).PCSpec();
+			  specs.PCSpec();
 		  
     // Sender's email ID needs to be mentioned
 	String from = "tester_dummy@yahoo.com";

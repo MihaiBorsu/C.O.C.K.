@@ -30,15 +30,18 @@ public class FileLogger implements ILogger
 		}
 	}
 
+	@Override
 	public void write(String string) 
 	{
 		pw.println(string);
 	}
 
+	@Override
 	public void write(long value) {
 		pw.println(String.valueOf(value));
 	}
 
+	@Override
 	public void write(Object... values) 
 	{
 		String s = "";
@@ -47,16 +50,19 @@ public class FileLogger implements ILogger
 		pw.println(s);
 	}
 
+	@Override
 	public void writeTime(long value, TimeUnit unit) 
 	{
 		pw.println(String.valueOf(TimeUnit.toTimeUnit(value, unit)));
 	}
 
+	@Override
 	public void writeTime(String string, long value, TimeUnit unit) 
 	{
 		pw.println(string + " " + TimeUnit.toTimeUnit(value, unit));
 	}
 
+	@Override
 	public void close() 
 	{
 		if (pw != null)

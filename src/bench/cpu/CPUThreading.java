@@ -8,11 +8,13 @@ public class CPUThreading implements IBenchmark
 	private int nThreads;
 	private Thread[] threads;
 
+	@Override
 	public void initialize(int size) 
 	{
 		this.size = size;
 	}
 
+	@Override
 	public void run(Object option) 
 	{
 		if (option instanceof Integer) 
@@ -41,9 +43,14 @@ public class CPUThreading implements IBenchmark
 		} 
 	}
 	
+	@Override
 	public void run() {}
+	@Override
 	public void warmUp() {}
+	@Override
 	public void warmUp(Object option) {}
+	@Override
 	public void clean() {}
+	@Override
 	public String getResult() {return null;}
 }

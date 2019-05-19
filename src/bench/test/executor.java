@@ -13,7 +13,7 @@ public class executor
 	   public void execute()
 	   {
 	   	PCSpecs specs = new PCSpecs();
-	 		((PCSpecs) specs).PCSpec();
+	   		((PCSpecs) specs).PCSpec();
 	 		  
 	 		int cores = Integer.valueOf(specs.proc4);
 	 		//int cores = 2;

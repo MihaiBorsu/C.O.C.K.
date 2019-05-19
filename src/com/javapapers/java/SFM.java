@@ -12,9 +12,9 @@ public class SFM
 	public void SendFromYahoo()
 	{
   	  PCSpecs specs = new PCSpecs();
-		  ((PCSpecs) specs).PCSpec();
+		  specs.PCSpec();
       executor ex = new executor();
-		  ((executor) ex).execute();
+		  ex.execute();
 		  
     // Sender's email ID needs to be mentioned
      String from = "tester_dummy@yahoo.com";
